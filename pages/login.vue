@@ -32,7 +32,7 @@
         <h6>社交帐号登录</h6>
         <ul>
           <li><a id="weixin" class="weixin" target="_top" href="http://localhost:8160/api/ucenter/wx/login" ><i class="iconfont icon-weixin"/></a></li>
-          <li><a id="qq" class="qq" target="_blank" href="#"><i class="iconfont icon-qq"/></a></li>
+          <li><a id="qq" class="qq" target="_top" href="https://openauth.alipay.com/oauth2/publicAppAuthorize.htm?app_id=2021003122662605&scope=auth_user&redirect_uri=http://47.111.93.238:8090/alipay/getParm"><i class="iconfont icon-qq"/></a></li>
         </ul>
       </div>
     </div>
@@ -68,7 +68,8 @@
         //第一步 调用接口进行登录，返回token字符串
         loginApi.submitLoginUser(this.user) 
            .then(response => {
-             //第二步 获取token字符串放到cookie里面
+             if(response.data.success){
+               //第二步 获取token字符串放到cookie里面
              //第一个参数cookie名称，第二个参数值，第三个参数作用范围
              cookie.set('jmu_token',response.data.data.token,{domain: 'localhost'})
              
@@ -82,6 +83,14 @@
                   //跳转页面
                   window.location.href = "/";
                 })
+             }
+             else{
+               this.$message({
+                type: 'error',
+                message: response.data.message
+              })
+             }
+             
            })
       },
       checkPhone (rule, value, callback) {

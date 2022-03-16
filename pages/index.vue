@@ -1,6 +1,6 @@
 <template>
   
-  <div>
+<div>
     <!-- 幻灯片 开始 -->
   <div v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
