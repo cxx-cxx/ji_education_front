@@ -54,7 +54,7 @@
           </section>
         </aside>
         <aside class="thr-attr-box">
-          <ol class="thr-attr-ol clearfix">
+          <ol class="thr-attr-ol ">
             <li>
               <p>&nbsp;</p>
               <aside>
@@ -68,7 +68,7 @@
               <aside>
                 <span class="c-fff f-fM">课时数</span>
                 <br />
-                <h6 class="c-fff f-fM mt10">20</h6>
+                <h6 class="c-fff f-fM mt10">{{courseWebVo.lessonNum}}</h6>
               </aside>
             </li>
             <li>
@@ -76,7 +76,7 @@
               <aside>
                 <span class="c-fff f-fM">浏览数</span>
                 <br />
-                <h6 class="c-fff f-fM mt10">501</h6>
+                <h6 class="c-fff f-fM mt10">{{courseWebVo.viewCount}}</h6>
               </aside>
             </li>
           </ol>
