@@ -16,7 +16,7 @@
             <dd class="c-s-dl-li">
               <ul class="clearfix">
                 <li>
-                  <a title="全部" href="#">全部</a>
+                  <a title="全部" href="#" @click="searchAll()">全部</a>
                 </li>
                 <li v-for="(item,index) in subjectNestedList" :key="index" :class="{active:oneIndex==index}">
                   <a :title="item.title" href="#" @click="searchOne(item.id,index)">{{item.title}}</a>
@@ -90,6 +90,9 @@
                   <section class="mt10 hLh20 of">
                     <span v-if="Number(item.price) === 0" class="fr jgTag bg-green">
                       <i class="c-fff fsize12 f-fA">免费</i>
+                    </span>
+                    <span v-else-if="Number(item.isActivity) != 0" class="fr jgTag bg-green">
+                      <i class="c-fff fsize12 f-fA">活动</i>
                     </span>
                     <span class="fl jgAttr c-ccc f-fA">
                       <i class="c-999 f-fA">9634人学习</i>
@@ -183,6 +186,13 @@ export default {
         .then(response => {
           this.subjectNestedList = response.data.data.list
         })
+    },
+    // 查询全部课程
+    searchAll(){
+      this.searchObj={}
+      this.initCourseFirst()
+      this.twoIndex=-1
+      this.oneIndex=-1
     },
 
     //3 分页切换的方法

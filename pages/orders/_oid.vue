@@ -40,9 +40,9 @@
           </td>
           <td class="price">
             <p>￥<strong>{{order.totalFee}}</strong></p>
-            <!-- <span class="discName red">限时8折</span> -->
+            <span class="discName red">限时特价</span>
           </td>
-          <td class="red priceNew Last">￥<strong>{{order.totalFee}}</strong></td>
+          <td class="red priceNew Last">￥<strong>{{order.originalPrice}}</strong></td>
         </tr>
         <tr>
           <td class="Billing tr" colspan="3">

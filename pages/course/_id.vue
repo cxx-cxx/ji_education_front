@@ -1,11 +1,19 @@
 <template>
   <div id="aCoursesList" class="bg-fa of">
+    <section v-if="courseWebVo.activityPrice!=null">
+      <el-alert
+        title="特惠课程"
+        type="success"
+        center
+        >
+  </el-alert>
+    </section>
     <!-- /课程详情 开始 -->
     <section class="container">
       <section class="path-wrap txtOf hLh30">
-        <a href="#" title class="c-999 fsize14">首页</a>
+        <a href="/" title class="c-999 fsize14">首页</a>
         \
-        <a href="#" title class="c-999 fsize14">{{
+        <a href="/course" title class="c-999 fsize14">{{
           courseWebVo.subjectLevelOne
         }}</a>
         \
@@ -28,10 +36,16 @@
             <h2 class="hLh30 txtOf mt15">
               <span class="c-fff fsize24">{{ courseWebVo.title }}</span>
             </h2>
-            <section class="c-attr-jg">
+            <section v-if="courseWebVo.activityPrice==null" class="c-attr-jg">
               <span class="c-fff">价格：</span>
-              <b class="c-yellow" style="font-size: 24px"
+              <b class="c-yellow" style="font-size: 22px"
                 >￥{{ courseWebVo.price }}</b
+              >
+            </section>
+            <section v-else class="c-attr-jg">
+              <span class="c-fff">特价：</span>
+              <b class="c-yellow" style="font-size: 22px"
+                >￥{{ courseWebVo.activityPrice }}</b
               >
             </section>
             <section class="c-attr-mt c-attr-undis">
