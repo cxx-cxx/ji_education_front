@@ -182,6 +182,7 @@ a.current-2 .lh-p-icon{background-position:0 -254px}
 .lh-bj-list ul li{border-bottom:1px solid #e9e9e9;padding:12px 5px 2px 65px;position:relative;min-height:50px}
 .noter-pic{position:absolute;left:0;top:12px}
 .noter-pic img{border-radius:50%;display:block;height:50px;width:50px}
+.noter-pic1 img{border-radius:50%;display:block;height:45px;width:45px}
 .noter-txt{line-height:180%;color:#4e4e4e;font-size:14px}
 .lh-n-cz{visibility:hidden}
 .lh-list-more{margin:10px 0}
@@ -194,7 +195,7 @@ a.current-2 .lh-p-icon{background-position:0 -254px}
 .n-reply{display:none;margin-top:8px}
 .n-reply-wrap textarea{background:#fff;border:1px solid #ddd;width:98%;height:48px;padding:4px;font-size:14px;color:#666;overflow-x:hidden;overflow-y:auto}
 .n-reply-wrap textarea:focus{border-color:#3FACEA}
-.lh-reply-btn{background:#6ACC7E;border:1px solid #55C76C;border-radius:3px;display:inline-block;height:18px;width:38px;text-align:center;font:12px/18px Arial;color:#fff}
+.lh-reply-btn{background:#6ACC7E;border:1px solid #55C76C;border-radius:3px;display:inline-block;height:20px;width:40px;text-align:center;font:12px/18px Arial;color:#fff}
 .lh-reply-btn:hover{background:#55C76C;color:#fff;text-decoration:none}
 .n-reply-list{padding-left:40px}
 .n-reply-list dd{border-bottom:1px solid #e9e9e9;padding:5px 0 8px 0;position:relative}
